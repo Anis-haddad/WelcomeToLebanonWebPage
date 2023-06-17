@@ -1,4 +1,5 @@
-﻿@page "/"
+﻿@inject NavigationManager NavigationManager
+@page "/"
 
 <PageTitle>Index</PageTitle>
 
@@ -7,9 +8,32 @@
 Welcome to your new app.
 
 @*<SurveyPrompt Title="How is Blazor working for you?" />*@
-<img height="198" width="290" src="css/beirutstreer.jpg" alt="My Image"/>
-<img height="198" width="290" src="css/Faraya2.jpg" alt="My Image" />
-<img height="198" width="290" src="css/byb1.jpg" alt="My Image" />
-<img height="198" width="290" src="css/harrisa2.jpg" alt="My Image" />
-<img height="198" width="290" src="css/baalbak1.webp" alt="My Image" />
+<img height="198" width="290" src="css/beirutstreer.jpg" alt="My Image" @onclick="NavigateToNewPage" />
+<img height="198" width="290" src="css/Faraya2.jpg" alt="My Image" @onclick="NavigateToFaraya" />
+<img height="198" width="290" src="css/byb1.jpg" alt="My Image" @onclick="NavigateToByblos" />
+<img height="198" width="290" src="css/harrisa2.jpg" alt="My Image" @onclick="NavigateToHarrissa" />
+<img height="198" width="290" src="css/baalbak1.webp" alt="My Image" @onclick="NavigateToBaalbak" />
 
+
+@code {
+    private void NavigateToNewPage()
+    {
+        NavigationManager.NavigateTo("/Beirut");
+    }
+    private void NavigateToFaraya()
+    {
+        NavigationManager.NavigateTo("/Faraya");
+    }
+    private void NavigateToByblos()
+    {
+        NavigationManager.NavigateTo("/Byblos");
+    }
+    private void NavigateToHarrissa()
+    {
+        NavigationManager.NavigateTo("/Harrissa");
+    }
+    private void NavigateToBaalbak()
+    {
+        NavigationManager.NavigateTo("/Baalbak");
+    }
+}
