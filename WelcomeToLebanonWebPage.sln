@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeToLebanonWebPage.Server", "WelcomeToLebanonWebPage\Server\WelcomeToLebanonWebPage.Server.csproj", "{3AF06D68-A25F-41E9-9A51-98B292E14459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WelcomeToLebanonWebPage.Server", "WelcomeToLebanonWebPage\Server\WelcomeToLebanonWebPage.Server.csproj", "{3AF06D68-A25F-41E9-9A51-98B292E14459}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeToLebanonWebPage.Client", "WelcomeToLebanonWebPage\Client\WelcomeToLebanonWebPage.Client.csproj", "{AA207A09-41CC-4119-854B-FEBC9EC21E9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WelcomeToLebanonWebPage.Client", "WelcomeToLebanonWebPage\Client\WelcomeToLebanonWebPage.Client.csproj", "{AA207A09-41CC-4119-854B-FEBC9EC21E9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeToLebanonWebPage.Shared", "WelcomeToLebanonWebPage\Shared\WelcomeToLebanonWebPage.Shared.csproj", "{D8409096-FA94-4A24-BA7A-CA6002D78582}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WelcomeToLebanonWebPage.Shared", "WelcomeToLebanonWebPage\Shared\WelcomeToLebanonWebPage.Shared.csproj", "{D8409096-FA94-4A24-BA7A-CA6002D78582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
