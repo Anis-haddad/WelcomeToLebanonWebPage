@@ -1,6 +1,17 @@
-﻿@page "/Byblos"
+﻿@inject NavigationManager NavigationManager
+@page "/Byblos"
 <h3>Byblos</h3>
+<img height="198" width="290" src="css/byb1.jpg" alt="My Image" />
+<img height="198" width="290" src="css/byb2.jpg" alt="My Image" />
+<img height="198" width="290" src="css/byb3.jpg" alt="My Image" />
+<p>
+    Byblos, located along the Mediterranean coast of Lebanon, is an enchanting city steeped in history. As one of the oldest continuously inhabited cities in the world, Byblos boasts a rich past that dates back over 7,000 years. It is renowned for its well-preserved archaeological sites, including ancient Phoenician temples, Roman ruins, and a medieval Crusader castle. Byblos is also credited with being the birthplace of the Phoenician alphabet, which became the basis for many modern writing systems.
+</p>
+<button @onclick="NavigateToIndex">GO BACK</button>
 
 @code {
-
+    private void NavigateToIndex()
+    {
+        NavigationManager.NavigateTo("/");
+    }
 }

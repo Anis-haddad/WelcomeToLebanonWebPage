@@ -1,11 +1,20 @@
-﻿@page "/Beirut"
+﻿@inject NavigationManager NavigationManager
+@page "/Beirut"
 <h3>Beirut</h3>
 
-
-
+<img height="198" width="290" src="css/beirut.png" alt="My Image" />
+<img height="198" width="290" src="css/beirutstreer.jpg" alt="My Image" />
+<img height="198" width="290" src="css/beirut1.jpg" alt="My Image" />
+<p>
+    Beirut, Lebanon's capital, is a historic city with a blend of cultures. It is one of the oldest inhabited cities globally, showcasing diverse architectural styles. Despite periods of conflict, Beirut has rebuilt into a thriving cultural hub with a vibrant nightlife and renowned culinary scene. It is also home to the prestigious American University of Beirut and boasts a dynamic arts and music scene.
+</p>
+<button @onclick="NavigateToIndex">GO BACK</button>
 
 
 
 @code {
-
+    private void NavigateToIndex()
+    {
+        NavigationManager.NavigateTo("/");
+    }
 }

@@ -1,11 +1,38 @@
-﻿
-
+﻿@inject NavigationManager NavigationManager
 @page "/MapOfLebanon"
 <PageTitle>MapOfLebanon</PageTitle>
 <h1>MapOfLebanon</h1>
 <img height="198" width="290" src="css/RedLebanon2.png" alt="My Image" />
+<p>
+    Lebanon shares borders with Syria to the north and east, and Israel to the south. Its western coastline stretches along the Mediterranean Sea. Area of Lebanon is 10452 km2,it is one of the smallest coutnry in middle east.
+</p>
+<button @onclick="NavigateToNewPage">BEIRUT</button>
+<button @onclick="NavigateToHarrissa">HARRISSA</button>
+<button @onclick="NavigateToFaraya">FARAYA</button>
+<button @onclick="NavigateToBaalbak">BAALBAK</button>
+<button @onclick="NavigateToByblos">BYBLOS</button>
+
 
 
 @code {
-    
+    private void NavigateToNewPage()
+    {
+        NavigationManager.NavigateTo("/Beirut");
+    }
+    private void NavigateToHarrissa()
+    {
+        NavigationManager.NavigateTo("/Harrissa");
+    }
+    private void NavigateToFaraya()
+    {
+        NavigationManager.NavigateTo("/Faraya");
+    }
+    private void NavigateToBaalbak()
+    {
+        NavigationManager.NavigateTo("/Baalbak");
+    }
+    private void NavigateToByblos()
+    {
+        NavigationManager.NavigateTo("/Byblos");
+    }
 }
