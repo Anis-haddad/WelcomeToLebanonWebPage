@@ -1,35 +1,39 @@
 ﻿@page "/Quiz"
 <h3>Quiz</h3>
 <img height="198" width="290" src="css/Question1.png" alt="My Image" />
-<p> @txtQuestion
-    
+<p> 
+    @txtQuestion 
 </p>
-<button @onclick="StartGame">@ans1</button>
-<button @onclick="StartGame">@ans2</button>
-<button @onclick="StartGame">@ans3</button>
-<button @onclick="StartGame">@ans4</button>
+<button @onclick="() => checkAnswer(1)">@ans1</button>
+<button @onclick="() => checkAnswer(2)">@ans2</button>
+<button @onclick="() => checkAnswer(3)">@ans3</button>
+<button @onclick="() => checkAnswer(4)">@ans4</button>
 <button @onclick="StartGame">start </button>
 
-<label>@correctAnswer</label>
-
-
+<label>Your score: {@correctAnswer}</label>
+@*<label>Question number: {@qNum}</label>
+<label>I: {@i}</label>
+<label>ARRAY:{@stringI}</label>*@
 
 @code {
     private string ans1 { get; set; } = "answer 1";
     private string ans2 { get; set; } = "answer 2";
     private string ans3 { get; set; } = "answer 3";
     private string ans4 { get; set; } = "answer 4";
+    private List<int> questionNumbers { get; set; } = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
     private int correctAnswer { get; set; } = 0;
     private string txtQuestion { get; set; } = "Hi welcome to this quiz game and we will be showing lots of different questions and you will click on the answer buttons to answer them.";
-    List<int> questionNumbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-    int qNum = 0;
-    int i;
-    int score;
+    private string stringI { get; set; } = "";
+    private int qNum { get; set; } = 0;
+    private int i { get; set; } = 1;
+
     private void NextQuestion()
     {
         if (qNum < questionNumbers.Count)
         {
+            List<int> questionNumbers = stringI.Split(',').Select(int.Parse).ToList();
             i = questionNumbers[qNum];
+            qNum++;
         }
         switch (i)
         {
@@ -131,8 +135,6 @@
                 @*qImage.Source = new BitmapImage(new Uri("/Question10.jpg", UriKind.Relative));*@
                 break;
         }
-        
-
     }
     private void StartGame()
     {
@@ -145,15 +147,32 @@
         // empty the question order label on the canvas
         //questionOrder.Content = null;
         // run a for loop to add the value which will display the randomised list to the display so we can see how the list has been ramdomised
-        //for (int i = 0; i < questionNumbers.Count; i++)
-        //{
-        //    questionOrder.Content += " " + questionNumbers[i].ToString();
-        //}
+        for (int i = 0; i < questionNumbers.Count; i++)
+        {
+            stringI = string.Join(",", questionNumbers);
+        }
         NextQuestion();
     }
-    private void checkAnswer()
+    private void checkAnswer(int buttonNumber)
     {
+        if (questionNumbers.Count < 11)
+        {
+            switch (buttonNumber)
+            {
+                case 1:
+                    if (i == 3 || i == 4 || i == 5 || i == 6 || i == 7 || i == 8 || i == 9) correctAnswer++;
+                    break;
+                case 2:
+                    if (i == 1) correctAnswer++;
+                    break;
+                case 3:
+                    if (i == 2) correctAnswer++;
+                    break;
+                case 4:
+                    if (i == 10) correctAnswer++;
+                    break;
+            }
+        }
         NextQuestion();
-
     }
 }
