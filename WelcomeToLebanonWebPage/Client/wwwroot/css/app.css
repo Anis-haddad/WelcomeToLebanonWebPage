@@ -2,6 +2,8 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:aqua;
+    background-color:black;
 }
 
 h1:focus {
@@ -99,3 +101,107 @@ a, .btn-link {
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+
+.Beirut-circle_button {
+    border-radius: 100%;
+    color: transparent;
+    background-color: aqua;
+    position: relative;
+    top: -280px;
+    left: 120px;
+    transition: background-color 0.01s
+}
+
+
+.Harrisa-circle_button {
+    border-radius: 100%;
+    color: transparent;
+    background-color: aqua;
+    position: relative;
+    top: -280px;
+    left: 190px;
+    transition: background-color 0.01s
+}
+.Baalbak-circle_button {
+    border-radius: 100%;
+    color: transparent;
+    background-color: aqua;
+    position: relative;
+    top: -310px;
+    left: 230px;
+    transition: background-color 0.01s
+}
+.Faraya-circle_button {
+    border-radius: 100%;
+    color: transparent;
+    background-color: aqua;
+    position: relative;
+    top: -223px;
+    left: 120px;
+    transition: background-color 0.01s
+}
+.Byblos-circle_button {
+    border-radius: 100%;
+    color: transparent;
+    background-color: aqua;
+    position: relative;
+    top: -343px;
+    left: -15px;
+    transition: background-color 0.01s
+}
+.Beirut-circle_button:hover {
+    background-color: darkblue;
+    
+}
+.Byblos-circle_button:hover {
+    background-color: darkblue;
+}
+.Harrisa-circle_button:hover {
+    background-color: darkblue;
+}
+.Faraya-circle_button:hover {
+    background-color: darkblue;
+}
+.Baalbak-circle_button:hover {
+    background-color: darkblue;
+}
+.Beirut_picture {
+    position: absolute;
+    top: 250px;
+    left: 700px;
+}
+.faraya_picture {
+    position: absolute;
+    top: 370px;
+    left: 270px;
+}
+.byblos_picture {
+    position: absolute;
+    top: 60px;
+    left: 270px;
+}
+.harrissa_picture {
+    position: absolute;
+    top: 60px;
+    right:30px;
+}
+.baalbak_picture {
+    position: absolute;
+    top: 370px;
+    right: 30px;
+}
+.intrestingfact-text {
+    color: aqua;
+    font-size:20px;
+  
+  
+}
+.activityToDo-text {
+    color: aqua;
+    font-size: 20px;
+}
+.about-us-text {
+    color: aqua;
+    font-size: 20px;
+}
