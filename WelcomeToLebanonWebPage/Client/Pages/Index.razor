@@ -7,12 +7,13 @@
 
 
 @*<SurveyPrompt Title="How is Blazor working for you?" />*@
-<img height="198" width="290" src="css/beirutstreer.jpg" alt="My Image" class="Beirut_picture" @onclick="NavigateToNewPage" />
-<img height="198" width="290" src="css/Faraya2.jpg" alt="My Image" class="faraya_picture" @onclick="NavigateToFaraya" />
-<img height="198" width="290" src="css/byb1.jpg" alt="My Image" class="byblos_picture" @onclick="NavigateToByblos" />
-<img height="198" width="290" src="css/harrisa2.jpg" alt="My Image" class="harrissa_picture" @onclick="NavigateToHarrissa" />
-<img height="198" width="290" src="css/baalbak1.webp" alt="My Image" class="baalbak_picture" @onclick="NavigateToBaalbak" />
-
+<div class="MainCities">
+    <img height="198" width="290" src="css/beirutstreer.jpg" alt="My Image" class="Beirut_picture" @onclick="NavigateToNewPage" />
+    <img height="198" width="290" src="css/Faraya2.jpg" alt="My Image" class="faraya_picture" @onclick="NavigateToFaraya" />
+    <img height="198" width="290" src="css/byb1.jpg" alt="My Image" class="byblos_picture" @onclick="NavigateToByblos" />
+    <img height="198" width="290" src="css/harrisa2.jpg" alt="My Image" class="harrissa_picture" @onclick="NavigateToHarrissa" />
+    <img height="198" width="290" src="css/baalbak1.webp" alt="My Image" class="baalbak_picture" @onclick="NavigateToBaalbak" />
+</div>
 
 @code {
     private void NavigateToNewPage()

@@ -14,6 +14,23 @@ a, .btn-link {
     color: #0071c1;
 }
 
+.titleName{
+    font-size:60px;
+    text-align: center;
+    /*background-color: yellow;*/
+    width:100%;
+    margin:0px 7px auto;
+}
+
+.MainCities {
+   /* background-color: red;*/
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -26,6 +43,7 @@ a, .btn-link {
 
 .content {
     padding-top: 1.1rem;
+    /*background-color: #FF191818;*/
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -168,34 +186,42 @@ a, .btn-link {
 }
 .Beirut_picture {
     position: absolute;
-    top: 250px;
-    left: 700px;
+    /*top: 250px;
+    left: 700px;*/
+    top: 30%;
+    left: 50%;
 }
 .faraya_picture {
     position: absolute;
-    top: 370px;
-    left: 270px;
+    /*top: 370px;
+    left: 270px;*/
+    top: 50%;
+    left: 25%;
 }
 .byblos_picture {
     position: absolute;
-    top: 60px;
-    left: 270px;
+    /*top: 60px;
+    left: 270px;*/
+    top: 20%;
+    left: 25%;
 }
 .harrissa_picture {
     position: absolute;
-    top: 60px;
-    right:30px;
+    /*top: 60px;
+    right:30px;*/
+    top: 20%;
+    left: 75%;
 }
 .baalbak_picture {
     position: absolute;
-    top: 370px;
-    right: 30px;
+    /*top: 370px;
+    right: 30px;*/
+    top: 50%;
+    left: 75%;
 }
 .intrestingfact-text {
     color: aqua;
     font-size:20px;
-  
-  
 }
 .activityToDo-text {
     color: aqua;
