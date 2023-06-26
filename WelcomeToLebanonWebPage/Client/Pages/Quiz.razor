@@ -1,16 +1,28 @@
 ﻿@page "/Quiz"
-<h3>Quiz</h3>
-<img height="198" width="290" src="css/Question1.png" alt="My Image" />
-<p> 
-    @txtQuestion 
-</p>
-<button @onclick="() => checkAnswer(1)">@ans1</button>
-<button @onclick="() => checkAnswer(2)">@ans2</button>
-<button @onclick="() => checkAnswer(3)">@ans3</button>
-<button @onclick="() => checkAnswer(4)">@ans4</button>
-<button @onclick="StartGame">start </button>
+<div class="quiz-design">    
+    <div class="container-image-quiz">
+        <img height="198" width="290" src="css/Question1.png" alt="My Image" />
+        </div>
+    
+        <p>
+            @txtQuestion
+        </p>
+        <label>Your score: {@correctAnswer}</label>
+        <button @onclick="StartGame">start </button>
 
-<label>Your score: {@correctAnswer}</label>
+    
+    <div class="container-bottun-quiz">
+        <button class="button-design" @onclick="() => checkAnswer(1)">@ans1</button>
+        <button class="button-design" @onclick="() => checkAnswer(2)">@ans2</button>
+        <button class="button-design" @onclick="() => checkAnswer(3)">@ans3</button>
+        <button class="button-design" @onclick="() => checkAnswer(4)">@ans4</button>
+    </div>
+    
+
+</div>
+
+
+
 @*<label>Question number: {@qNum}</label>
 <label>I: {@i}</label>
 <label>ARRAY:{@stringI}</label>*@

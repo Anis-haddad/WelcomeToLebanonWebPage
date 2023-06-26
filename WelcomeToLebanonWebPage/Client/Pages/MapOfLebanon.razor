@@ -1,18 +1,28 @@
 ﻿@inject NavigationManager NavigationManager
 @page "/MapOfLebanon"
+
 <PageTitle>MapOfLebanon</PageTitle>
-<h1>MapOfLebanon</h1>
-<img height="400" width="500" src="css/RedLebanon2.png" alt="My Image" />
-<p>
-    Lebanon shares borders with Syria to the north and east, and Israel to the south. Its western coastline stretches along the Mediterranean Sea. Area of Lebanon is 10452 km2,it is one of the smallest coutnry in middle east.
-</p>
-<button class="Beirut-circle_button" @onclick="NavigateToNewPage"> hhh  </button>
-<button class="Harrisa-circle_button" @onclick="NavigateToHarrissa">hhh</button>
-<button class="Faraya-circle_button" @onclick="NavigateToFaraya">hhh</button>
-<button class="Baalbak-circle_button" @onclick="NavigateToBaalbak">hhh</button>
-<button class="Byblos-circle_button" @onclick="NavigateToByblos">hhh</button>
 
-
+<div class="map-design"> 
+    <div class="button-with-map">
+        <div class="map-map-of-Lebanon">
+            <img class="map-image-design" height="400" width="500" src="css/RedLebanon2.png" alt="My Image" />
+        </div>
+        <div class="map-buttons">
+            <button class="Beirut-circle_button" @onclick="NavigateToNewPage"></button>
+            <button class="Harrisa-circle_button" @onclick="NavigateToHarrissa"></button>
+            <button class="Faraya-circle_button" @onclick="NavigateToFaraya"></button>
+            <button class="Baalbak-circle_button" @onclick="NavigateToBaalbak"></button>
+            <button class="Byblos-circle_button" @onclick="NavigateToByblos"></button>
+        </div>
+    </div>
+    <div class="map-of-Lebanon-text">
+        <h1>MapOfLebanon</h1>
+        <p>
+            Lebanon shares borders with Syria to the north and east, and Israel to the south. Its western coastline stretches along the Mediterranean Sea. Area of Lebanon is 10452 km2,it is one of the smallest coutnry in middle east.
+        </p>
+    </div>
+</div>
 
 @code {
     private void NavigateToNewPage()
