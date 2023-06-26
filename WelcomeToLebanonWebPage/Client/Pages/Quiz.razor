@@ -1,27 +1,32 @@
 ﻿@page "/Quiz"
 <div class="quiz-design">    
-    <div class="container-image-quiz">
-        <img height="198" width="290" src="css/Question1.png" alt="My Image" />
+    @if (startClicked && !quizFinished)
+    {
+        <div class="container-image-quiz">
+            <img height="198" width="290" src="@srcOfImage" alt="My Image" />
         </div>
-    
         <p>
             @txtQuestion
         </p>
-        <label>Your score: {@correctAnswer}</label>
-        <button @onclick="StartGame">start </button>
-
-    
-    <div class="container-bottun-quiz">
-        <button class="button-design" @onclick="() => checkAnswer(1)">@ans1</button>
-        <button class="button-design" @onclick="() => checkAnswer(2)">@ans2</button>
-        <button class="button-design" @onclick="() => checkAnswer(3)">@ans3</button>
-        <button class="button-design" @onclick="() => checkAnswer(4)">@ans4</button>
-    </div>
-    
-
+    }
+    @if (quizFinished)
+    {
+        <label class="score-quiz">Your score: @correctAnswer</label>
+    }
+    @if (!startClicked)
+    {
+        <button class="button-design" @onclick="StartGame">start </button>
+    }
+    @if (startClicked && !quizFinished)
+    {
+        <div class="container-bottun-quiz">
+            <button class="button-design" @onclick="() => checkAnswer(1)">@ans1</button>
+            <button class="button-design" @onclick="() => checkAnswer(2)">@ans2</button>
+            <button class="button-design" @onclick="() => checkAnswer(3)">@ans3</button>
+            <button class="button-design" @onclick="() => checkAnswer(4)">@ans4</button>
+        </div>
+    } 
 </div>
-
-
 
 @*<label>Question number: {@qNum}</label>
 <label>I: {@i}</label>
@@ -36,8 +41,11 @@
     private int correctAnswer { get; set; } = 0;
     private string txtQuestion { get; set; } = "Hi welcome to this quiz game and we will be showing lots of different questions and you will click on the answer buttons to answer them.";
     private string stringI { get; set; } = "";
+    private string srcOfImage { get; set; } = "css/Question1.png";
     private int qNum { get; set; } = 0;
     private int i { get; set; } = 1;
+    private bool startClicked  = false;
+    private bool quizFinished = false;
 
     private void NextQuestion()
     {
@@ -47,6 +55,10 @@
             i = questionNumbers[qNum];
             qNum++;
         }
+        else
+        {
+            quizFinished = true;
+        }
         switch (i)
         {
             case 1:
@@ -55,14 +67,9 @@
                 ans2 = "4 millions";
                 ans3 = "5 millions";
                 ans4 = "8 millions";
-                @*ans2.Tag= "1"; // here we tell the program which one of the answers above is the right answer by adding the 1 inside of the tag for the button.*@
                 // in this example we adding 1 inside of ans2 or button 2
                 // so when the button is clicked the game will know which is the correct answer and it add 1 to the score for the game
-                //qImage.Source = new BitmapImage(new Uri("cedar 2.png")); // here we will load the 1st image inside of the qimage
-                //string abc = "/Images/Quiz/Question1.png";
-                //BitmapImage bitmap = new BitmapImage(new Uri("cedar 2.png"));
-                //Uri imageUri = new Uri("Images/Quiz/Question1.png");
-                @*qImage.Source = new BitmapImage(new Uri("/Question1.png", UriKind.Relative));*@
+                srcOfImage = "css/Question1.png";
                 break; // when this condition is met the program will break the switch statement here and wait for the next one
                        // rest of the condition will follow the same principle as this one
             case 2:
@@ -71,8 +78,7 @@
                 ans2 = "7060 km2";
                 ans3 = "10452 km2";
                 ans4 = "17230 km2";
-                @*ans3.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question2.png", UriKind.Relative));*@
+                srcOfImage = "css/Question2.png"; 
                 break;
             case 3:
                 txtQuestion = "Lebanon has access to the: ";
@@ -80,8 +86,7 @@
                 ans2 = "Black sea";
                 ans3 = "Red sea";
                 ans4 = "Baltic sea";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question3.png", UriKind.Relative));*@
+                srcOfImage = "css/Question3.png";
                 break;
             case 4:
                 txtQuestion = "How many religions The country recognizes:";
@@ -89,8 +94,7 @@
                 ans2 = "2 religious communities";
                 ans3 = "10 religious communities";
                 ans4 = "6 religious communities";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question4.png", UriKind.Relative));*@
+                srcOfImage = "css/Question4.png";
                 break;
             case 5:
                 txtQuestion = "What is the capital city of Lebanon?";
@@ -98,8 +102,7 @@
                 ans2 = "Tripoli";
                 ans3 = "Harrissa";
                 ans4 = "Byblos";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question5.png", UriKind.Relative));*@
+                srcOfImage = "css/Question5.png";
                 break;
             case 6:
                 txtQuestion = "how much is the highest mountain in Lebanon?";
@@ -107,8 +110,7 @@
                 ans2 = "1502 meters";
                 ans3 = "6900 meters";
                 ans4 = "4532 meters";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question6.png", UriKind.Relative));*@
+                srcOfImage = "css/Question6.png";
                 break;
             case 7:
                 txtQuestion = "What is the type of authority in Lebanon";
@@ -116,8 +118,7 @@
                 ans2 = "Royal";
                 ans3 = "Dictatorship";
                 ans4 = "Federalism";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question7.png", UriKind.Relative));*@
+                srcOfImage = "css/Question7.png";
                 break;
             case 8:
                 txtQuestion = "In what year Lebanon got its independence ";
@@ -125,8 +126,7 @@
                 ans2 = "1990";
                 ans3 = "2000";
                 ans4 = "1955";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question8.jpg", UriKind.Relative));*@
+                srcOfImage = "css/Question8.jpg";
                 break;
             case 9:
                 txtQuestion = "What is main language in lebanon";
@@ -134,8 +134,7 @@
                 ans2 = "Aramic";
                 ans3 = "Persian";
                 ans4 = "Hebrew";
-                @*ans1.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question9.jpg", UriKind.Relative));*@
+                srcOfImage = "css/Question9.jpg";
                 break;
             case 10:
                 txtQuestion = "When was the city of Byblos founded?";
@@ -143,8 +142,7 @@
                 ans2 = "2300 years ago";
                 ans3 = "3800 years ago";
                 ans4 = "5000 years ago";
-                @*ans4.Tag = "1";*@
-                @*qImage.Source = new BitmapImage(new Uri("/Question10.jpg", UriKind.Relative));*@
+                srcOfImage = "css/Question10.jpg";
                 break;
         }
     }
@@ -163,11 +161,12 @@
         {
             stringI = string.Join(",", questionNumbers);
         }
+        startClicked = !startClicked;
         NextQuestion();
     }
     private void checkAnswer(int buttonNumber)
     {
-        if (questionNumbers.Count < 11)
+        if (qNum < 11)
         {
             switch (buttonNumber)
             {
@@ -184,6 +183,10 @@
                     if (i == 10) correctAnswer++;
                     break;
             }
+        }
+        else
+        {
+            quizFinished = !quizFinished;
         }
         NextQuestion();
     }

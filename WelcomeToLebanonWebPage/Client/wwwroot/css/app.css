@@ -436,3 +436,23 @@ a, .btn-link {
     .text-of-map-of-lebanon:hover {
         transform: scale(1.2);
     }
+#quizbutton {
+    /*visibility:hidden;*/
+}
+.city-page-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    flex-direction: column;
+    width: 100%;
+    /*background-color: brown;*/
+    gap: 30px;
+}
+.city-page-text{
+    width: 80%;
+    /*background-color: yellow;*/
+}
+.score-quiz{
+    font-size: 24px;
+}

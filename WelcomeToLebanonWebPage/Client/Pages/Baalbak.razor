@@ -1,17 +1,21 @@
 ﻿@inject NavigationManager NavigationManager
 @page "/Baalbak"
-<h3>Baalbak</h3>
-<img height="198" width="290" src="css/baa2.jpg" alt="My Image" />
-<img height="198" width="290" src="css/baa1.jpg" alt="My Image" />
-<img height="198" width="290" src="css/baa3.jpg" alt="My Image" />
-<p>
-    Baalbek, situated in Lebanon's Beqaa Valley, is an ancient city renowned for its remarkable Roman ruins. The city is home to the monumental Temple of Baalbek, one of the largest Roman temple complexes in the world. Its towering columns and intricate stone carvings showcase the impressive craftsmanship of the Roman Empire. Baalbek's historical significance also stems from its previous occupation by the Greeks and Phoenicians. The ruins continue to fascinate visitors, offering a glimpse into the grandeur of the ancient world
-</p>
 
-
-<div class="container-bottun-goback">
-    <button class="button-design" @onclick="NavigateToIndex">GO BACK</button>
+<div class="city-page-design">
+    <h3>Baalbak</h3>
+    <div class="city-page-images">
+        <img height="198" width="290" src="css/baa2.jpg" alt="My Image" />
+        <img height="198" width="290" src="css/baa1.jpg" alt="My Image" />
+        <img height="198" width="290" src="css/baa3.jpg" alt="My Image" />
+    </div>
+    <p class="city-page-text">
+        Baalbek, situated in Lebanon's Beqaa Valley, is an ancient city renowned for its remarkable Roman ruins. The city is home to the monumental Temple of Baalbek, one of the largest Roman temple complexes in the world. Its towering columns and intricate stone carvings showcase the impressive craftsmanship of the Roman Empire. Baalbek's historical significance also stems from its previous occupation by the Greeks and Phoenicians. The ruins continue to fascinate visitors, offering a glimpse into the grandeur of the ancient world
+    </p>
+    <div class="container-bottun-goback">
+        <button class="button-design" @onclick="NavigateToIndex">GO BACK</button>
+    </div>
 </div>
+
 @code {
     private void NavigateToIndex()
     {
