@@ -2,8 +2,12 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color:aqua;
-    background-color:black;
+    background: linear-gradient(45deg, #00bcd4, black);
+    border-bottom: 1px solid grey;
+    
+    background-color: navy;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px #0071c1;
 }
 
 h1:focus {
@@ -11,15 +15,26 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #0071c1;
+    color: transparent;
 }
 
-.titleName{
-    font-size:60px;
+.titleName {
+    font-size: 60px;
+    left:20%;
     text-align: center;
     /*background-color: yellow;*/
-    width:100%;
-    margin:0px 7px auto;
+   /* width: 100%;*/
+    margin: 0px 7px auto;
+    position: absolute;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 35px;
+    width: 65%;
+    text-align: center;
+    
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
 }
 
 .MainCities {
@@ -193,12 +208,40 @@ a, .btn-link {
     top: 30%;
     left: 50%;
 }
+.Beirut_label {
+    position: absolute;
+    top: 51%;
+    left: 53%;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+}
 .faraya_picture {
     position: absolute;
     /*top: 370px;
     left: 270px;*/
     top: 50%;
     left: 25%;
+}
+.Faraya_label {
+    position: absolute;
+    top: 71%;
+    left: 28%;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
 }
 .byblos_picture {
     position: absolute;
@@ -207,12 +250,40 @@ a, .btn-link {
     top: 20%;
     left: 25%;
 }
+.byblos_label {
+    position: absolute;
+    top: 41%;
+    left: 28%;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+}
 .harrissa_picture {
     position: absolute;
     /*top: 60px;
     right:30px;*/
     top: 20%;
     left: 75%;
+}
+.Harrissa-label {
+    position: absolute;
+    top: 41%;
+    left: 78%;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
 }
 .baalbak_picture {
     position: absolute;
@@ -221,17 +292,31 @@ a, .btn-link {
     top: 50%;
     left: 75%;
 }
+.baalbak-label {
+    position: absolute;
+    top: 71%;
+    left: 79%;
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 10%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+}
 /*.intrestingfact-text {
     color: aqua;
     font-size: 20px;*/
-    /*background-color: yellow;*/
-    /*width: 80%;
+/*background-color: yellow;*/
+/*width: 80%;
 }*/
 /*.activityToDo-text {
     color: aqua;
     font-size: 20px;*/
-    /*background-color: yellow;*/
-    /*width:50%;
+/*background-color: yellow;*/
+/*width:50%;
 }*/
 /*.about-us-text {
     color: aqua;
@@ -243,8 +328,7 @@ a, .btn-link {
     /*position: relative;*/
     top: 5px;
     left: 70%;
-    margin-left:12%;
-    
+    margin-left: 12%;
 }
 
 .flag-container {
@@ -369,6 +453,7 @@ a, .btn-link {
 
 .underlined-text {
     text-decoration: underline;
+    color:aqua;
 }
 .about-us-text {
     color: aqua;
