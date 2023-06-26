@@ -221,23 +221,24 @@ a, .btn-link {
     top: 50%;
     left: 75%;
 }
-.intrestingfact-text {
+/*.intrestingfact-text {
     color: aqua;
-    font-size: 20px;
+    font-size: 20px;*/
     /*background-color: yellow;*/
-    width: 80%;
-}
-.activityToDo-text {
+    /*width: 80%;
+}*/
+/*.activityToDo-text {
     color: aqua;
-    font-size: 20px;
+    font-size: 20px;*/
     /*background-color: yellow;*/
-    width:50%;
-}
-.about-us-text {
+    /*width:50%;
+}*/
+/*.about-us-text {
     color: aqua;
     font-size: 20px;
     width: 80%;
-}
+    
+}*/
 .image-of-flag {
     /*position: relative;*/
     top: 5px;
@@ -365,3 +366,72 @@ a, .btn-link {
 .map-map-of-Lebanon{
     position:relative;
 }
+
+.underlined-text {
+    text-decoration: underline;
+}
+.about-us-text {
+    color: aqua;
+    background: linear-gradient(45deg, #00bcd4, black);
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+    transform: scale(2.2.7);
+    transition: transform 0.19s ease-in-out;
+}
+
+    .about-us-text:hover {
+        transform: scale(1.2);
+    }
+.activityToDo-text {
+    color: aqua;
+    background: linear-gradient(45deg, #00bcd4, black);
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+    transform: scale(2.2.7);
+    transition: transform 0.19s ease-in-out;
+}
+    .activityToDo-text:hover {
+        transform: scale(1.2);
+    }
+.intrestingfact-text {
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+    transform: scale(2.2.7);
+    transition: transform 0.19s ease-in-out;
+}
+    .intrestingfact-text:hover {
+        transform: scale(1.2);
+    }
+.text-of-map-of-lebanon {
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+    transform: scale(2.2.7);
+    transition: transform 0.19s ease-in-out;
+}
+    .text-of-map-of-lebanon:hover {
+        transform: scale(1.2);
+    }
