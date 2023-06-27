@@ -3,15 +3,15 @@
     @if (startClicked && !quizFinished)
     {
         <div class="container-image-quiz">
-            <img height="198" width="290" src="@srcOfImage" alt="My Image" />
+            <img height="298" width="390" src="@srcOfImage" alt="My Image" />
         </div>
-        <p>
+        <p class="quiz-question-text">
             @txtQuestion
         </p>
     }
     @if (quizFinished)
     {
-        <label class="score-quiz">Your score: @correctAnswer</label>
+        <label class="score-quiz">Your score: @correctAnswer/10</label>
     }
     @if (!startClicked)
     {

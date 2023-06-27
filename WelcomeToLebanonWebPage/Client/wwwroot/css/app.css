@@ -140,50 +140,56 @@ a, .btn-link {
     border-radius: 100%;
     color: transparent;
     background-color: aqua;
-    position: relative;
-    top: -280px;
-    left: 120px;
-    transition: background-color 0.01s
+    position: absolute;
+    top: 46%;
+    left: 25%;
+    transition: background-color 0.01s; 
+    height:5%;
+    width: 7%;
 }
-
-
 .Harrisa-circle_button {
     border-radius: 100%;
     color: transparent;
     background-color: aqua;
-    position: relative;
-    top: -280px;
-    left: 190px;
-    transition: background-color 0.01s
+    position: absolute;
+    top: 46%;
+    left: 48%;
+    transition: background-color 0.01s;
+    height: 5%;
+    width: 7%;
 }
 .Baalbak-circle_button {
     border-radius: 100%;
     color: transparent;
     background-color: aqua;
-    position: relative;
-    top: -310px;
-    left: 230px;
+    position: absolute;
+    top: 38%;
+    left: 74%;
     transition: background-color 0.01s;
+    height: 5%;
+    width: 7%;
 }
 .Faraya-circle_button {
     border-radius: 100%;
     color: transparent;
     background-color: aqua;
-    position: relative;
-    /*top: -223px;
-    left: 120px;*/
+    position: absolute;
+    top: 60%;
+    left: 43%;
     transition: background-color 0.01s;
-    height:20px;
-    width:20px;
+    height: 5%;
+    width: 7%;
 }
 .Byblos-circle_button {
     border-radius: 100%;
     color: transparent;
     background-color: aqua;
-    position: relative;
-    top: -343px;
-    left: -15px;
+    position: absolute;
+    top: 30%;
+    left: 34%;
     transition: background-color 0.01s;
+    height: 5%;
+    width: 7%;
 }
 .Beirut-circle_button:hover {
     background-color: darkblue;
@@ -208,6 +214,9 @@ a, .btn-link {
     top: 30%;
     left: 50%;
 }
+    .Beirut_picture:hover{
+        opacity:0.6;
+    }
 .Beirut_label {
     position: absolute;
     top: 51%;
@@ -229,6 +238,9 @@ a, .btn-link {
     top: 50%;
     left: 25%;
 }
+    .faraya_picture:hover {
+        opacity: 0.6;
+    }
 .Faraya_label {
     position: absolute;
     top: 71%;
@@ -250,6 +262,9 @@ a, .btn-link {
     top: 20%;
     left: 25%;
 }
+    .byblos_picture:hover {
+        opacity: 0.6;
+    }
 .byblos_label {
     position: absolute;
     top: 41%;
@@ -271,6 +286,9 @@ a, .btn-link {
     top: 20%;
     left: 75%;
 }
+    .harrissa_picture:hover {
+        opacity: 0.6;
+    }
 .Harrissa-label {
     position: absolute;
     top: 41%;
@@ -291,6 +309,9 @@ a, .btn-link {
     right: 30px;*/
     top: 50%;
     left: 75%;
+}
+.baalbak_picture {
+    opacity: 0.6;
 }
 .baalbak-label {
     position: absolute;
@@ -384,11 +405,11 @@ a, .btn-link {
     gap: 30px;
 }
 .container-image-quiz {
-  /*  background-color: forestgreen;*/
+    /*background-color: forestgreen;*/
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 70px;
+    margin-left: 0px;
 }
 .text-activitytodo-design {
     display: flex;
@@ -422,19 +443,20 @@ a, .btn-link {
 }
 .map-design {
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     /*background-color: brown;*/
     gap: 30px;
 }
 .button-with-map {
-    position:relative;
+    position: relative;
     background-color: yellow;
     /*display: block;*/
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 60%;
+    height: 70%;
+    width: 70%;
+    aspect-ratio: 1527 / 1200;
 }
 .map-image-design {
     /*margin-left: 30%;*/
@@ -443,12 +465,14 @@ a, .btn-link {
     width: 100%;
 }
 
-.map-buttons{
-    position: absolute;
-    background-color: hotpink;
+.map-buttons {
+    position: relative;
+    /*background-color: hotpink;*/
+    height: 162%;
+    width: 100%;
 }
 .map-map-of-Lebanon{
-    position:relative;
+    position:absolute;
 }
 
 .underlined-text {
@@ -538,6 +562,25 @@ a, .btn-link {
     width: 80%;
     /*background-color: yellow;*/
 }
-.score-quiz{
+.score-quiz {
+    font-size: 36px;
+    text-decoration: underline;
+    color: aqua;
+}
+.quiz-question-text {
     font-size: 24px;
+    color: aqua;
+}
+.city-page-text {
+    background: linear-gradient(45deg, #00bcd4, black);
+    color: aqua;
+    font-size: 20px;
+    width: 80%;
+    text-align: left;
+    padding: 10px;
+    background-color: navy;
+    border-radius: 20px;
+    box-shadow: 0 22px 42px #0071c1;
+    transform: scale(2.2.7);
+    transition: transform 0.19s ease-in-out;
 }
